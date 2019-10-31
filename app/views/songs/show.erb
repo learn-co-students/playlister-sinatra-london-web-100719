@@ -1,0 +1,13 @@
+<h1> Greetings here are some dope ass songs </h1>
+<p> <%= @song.name %> by <a href="/artists/<%= @song.artist.slug %>" ><%= @song.artist.name %></a> </p>
+
+
+<p> <%= @song.artist.name %> </p>
+
+<p>its genre are:</p> 
+<% @song.genres.map do |genre| %>
+    <p><a href="/genres/<%= genre.slug %>"><%= genre.name %></a></p>
+<% end %>
+
+<p>  "Successfully created song." </p>
+<p> "Successfully updated song." </p>
