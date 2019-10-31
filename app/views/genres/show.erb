@@ -1,0 +1,13 @@
+<h1> Greetings here are some dope ass genres Page </h1>
+<p> <%= @genre.name %>
+
+
+<p>its artists are:</p> 
+<% @genre.artists.map do |artist| %>
+    <p><a href="/artists/<%= artist.slug %>"><%= artist.name %></a></p>
+<% end %>
+
+<p> its songs are: </p>
+<% @genre.songs.map do |song| %>
+    <p><a href="/songs/<%= song.slug %>"><%= song.name %></a></p>
+<% end %>
